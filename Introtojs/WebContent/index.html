@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>This be the Tab</title>
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<div class="navbar"></div>
+<div class="content">
+<script>
+function myFunction(){
+	document.getElementById("demo3").innerHTML = "text different";
+}
+function myFunction2(num1, num2){
+	return num1 * num2;
+}
+var c = 4;
+var d = c+c;
+var e = myFunction2(34,2)
+var f = {g=1, h=2, i=3}
+
+document.getElementById("demo4").innerHTML = "c is " + c + " and d is " + d;
+
+var cat = "Maurice", dog = "Urn", parrot = "Joey";
+document.getElementById("demo5").innerHTML = cat + dog + parrot + typeof cat;
+</script>
+<h1> Practicing JavaScript</h1>
+
+<button type = "button"
+onclick="document.getElementById('demo').innerHTML = Date()">Click me to you know </button>
+
+<button type="button"
+onclick='document.getElementById("demo1").innerHTML = "like this or like that"'>button</button>
+
+
+<p id="demo">replace this</p>
+
+<p id="demo1"> like this or</p>
+
+<p id="demo3"> text same</p>
+<button type="button" onclick="myFunction()">click here</button>
+
+<p id="demo4"></p>
+
+<p id="demo5"></p>
+
+<p id="demo6"></p>
+
+
+<script>
+
+
+</script>
+
+</div>
+</body>
+</html>
