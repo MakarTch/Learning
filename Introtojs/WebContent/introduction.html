@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Introduction</title>
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<div class="navbar"></div>
+<div class="content">
+
+<p > Hi! My name is Makar, What's your name?</p>
+
+<input type="text" id="name" autocomplete="off" required>
+<button onclick="questionOne();">Click!</button>
+
+<p id="questionOne" >Hi <span id="nameTwin"></span>, what's your favorite color?<br>
+<input type="text" id="color" autocomplete="off">
+<button onclick="questionTwo();">Click!</button>
+</p>
+
+<p id="questionTwo" ><span id="colorTwin"></span> huh? Interesting choice. What state do you live in?<br>
+<input type="text" id="state" autocomplete="off">
+<button onclick="questionThree();">Click!</button>
+</p>
+
+<p id="finalStatement">So <span id="nameTwin"></span>, your favorite color is <span id="colorTwin"></span> and you live in <span id="stateTwin"></span>.</p>
+</div>
+
+<script>
+console.log("starting script");
+document.getElementById("name").focus();
+document.getElementById("questionOne").style.visibility="hidden";
+document.getElementById("questionTwo").style.visibility="hidden";
+document.getElementById("finalStatement").style.visibility="hidden";
+var name;
+var color;
+var state;
+console.log("name is " + name +", color is " + color + ", and state is " + state);
+
+
+function questionOne(){
+	console.log("Inside questionOne");
+	name = document.getElementById("name").value;
+	document.getElementById("nameTwin").innerHTML = name;
+	document.getElementById("questionOne").style.visibility="visible";
+	console.log("name is " + name +", color is " + color + ", and state is " + state);
+}
+
+function questionTwo(){
+	console.log("Inside questionTwo");
+	color = document.getElementById("color").value;
+	document.getElementById("colorTwin").innerHTML = color;
+	document.getElementById("questionTwo").style.visibility="visible";
+	console.log("name is " + name +", color is " + color + ", and state is " + state);
+}
+
+function questionThree(){
+	console.log("Inside questionThree");
+	state = document.getElementById("state").value;
+	document.getElementById("stateTwin").innerHTML = state;
+	document.getElementById("finalStatement").style.visibility="visible";
+	console.log("name is " + name +", color is " + color + ", and state is " + state);
+
+}
+
+console.log("name is " + name +", color is " + color + ", and state is " + state);
+console.log("ending script");
+</script>
+
+</body>
+</html>

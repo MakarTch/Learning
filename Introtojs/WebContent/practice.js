@@ -1,5 +1,3 @@
-"use strict"
-
 function myFunction(){
 	document.getElementById("demo3").innerHTML = "text different";
 }
@@ -21,7 +19,9 @@ function myFunction5(){
 	}
 	document.getElementById("demo20").innerHTML = text;
 }
-
+function myFunction6() {
+	  window.alert("Page is loaded");
+	}//This isnt working >:(
 var f = {
 		g:1, 
 		h:2, 
@@ -103,7 +103,6 @@ document.getElementById("demo17").innerHTML = document.URL ;
 
 var textHolder = document.getElementById("demo18");
 document.getElementById("demo19").innerHTML=textHolder.innerHTML + " should be the same as the line before";
-
 
 
 
