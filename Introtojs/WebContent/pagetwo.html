@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="stylesheet.css">
+<title>Page Two</title>
+<style>
+.content{
+	height:100%; /*In the future I want to make this a fucntion like its 100% until the page is too large, actually na, thats not too practical*/
+}
+</style>
+</head>
+<body>
+<div class="navbar"></div>
+<div class="content">
+<h1>Welcome to page 2</h1>
+<p>Gonna start practicing on this page</p>
+
+<form id="form1">
+First Name: <input type="text" name="firstName" style="margin-right:10px" autocomplete = "off">
+Last Name:  <input type="text" name="lastName" autocomplete = "off">
+</form>
+<button type="button" onclick="myFunction5()" >Submit</button>
+
+<p id="demo20"></p>
+
+<p> Text that will be pushed down after entering values then pressing submit</p>
+
+<span id="id1" style="margin-right:10px">Changing font color to green</span>
+<button type="button"
+onclick="document.getElementById('id1').style.color = 'mediumseagreen'">
+Click Me!</button>
+
+</div>
+<script src="practice.js"></script>
+</body>
+</html>

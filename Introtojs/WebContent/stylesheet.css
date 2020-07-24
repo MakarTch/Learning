@@ -3,6 +3,7 @@
 * {
 	box-sizing: border-box;
 }
+
 html, body{
 	margin:0;
 	font-size:16px;
@@ -10,6 +11,7 @@ html, body{
 	height:100%;
 	font-family:'Adamina';
 	background-image:linear-gradient(rgb(179, 194, 255),rgb(204, 216, 255));
+	overflow-y: scroll;
 }
 
 .navbar{
@@ -26,19 +28,18 @@ html, body{
 .content{
 	float:left;
 	width:60%;
-	height:100%;
 	padding:40px 120px;
 	background-color:white;
     box-shadow: 0 3px 3px 4px rgba(0, 0, 0, .1);
 }
   
 form{
-	margin-left:20px;
+	/*margin-left:20px;*/
 }
 
   
-input, select{
-	margin:8px 0;
+input, select, button{
+	margin:0px 0; /*I changed this*/
 	padding:2px 4px;
 	-webkit-transition: 0.5s;
  	transition: 0.5s;
@@ -50,7 +51,7 @@ input, select{
 }
 
 input:focus{
-    border: 1px solid rgb(0,153,77);
+    border: 1px solid blue;
 } 
 input[type="submit"]{
 	margin:10px 0;
@@ -60,15 +61,32 @@ input[type="submit"]{
 	font-size:0.8em;
 	cursor:pointer;
 	transition:0.5s;
-	border: 1px solid rgb(0,153,77);
-    color:rgb(0, 102, 37);
+	border: 1px solid blue;		
+    color:blue;
+    background-color:white;
+}
+button{
+	margin:10px 0;
+	padding:5px 10px;
+	font-family:'Adamina';
+	letter-spacing:1px;
+	font-size:0.8em;
+	cursor:pointer;
+	transition:0.5s;
+	border: 1px solid blue;		
+    color:blue;
     background-color:white;
 }
 
 input[type="submit"]:hover{
     color:white;
-	background-color:rgb(0,153,77);
-    box-shadow: 0px 0px 10px rgba(0,0,0, 0.2);
+	background-color:rgb(102, 102, 255);
+    box-shadow: 0px 0px 10px rgba(0,0,0, 0.1);
+}
+button:hover{
+	color:white;
+	background-color:rgb(102, 102, 255);
+    box-shadow: 0px 0px 10px rgba(0,0,0, 0.1);
 }
 input[type="radio"]{
 	margin-bottom:6px;

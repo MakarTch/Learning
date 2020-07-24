@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Tab it up</title>
+<title>Index</title>
 <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
@@ -44,15 +44,44 @@ onclick='document.getElementById("demo1").innerHTML = "like this or like that"'>
 
 <p id="demo12"></p>
 
-<p id="demo11"></p>
+<script>
+function validateForm(){
+	var x = document.forms["myForm"]["fName"].value;
+	console.log("inside validateForm()")
+	if (x =="" | x==10){
+		alert("Please enter a value in the text box!")
+		return false;
+	}
+}
+</script>
 
-<p id="demo11"></p>
+<form name="myForm" action="pagetwo.html" onsubmit="return validateForm()">
+<input type="text" name="fName" autocomplete="off" > <!-- Here's 2 ways to make sure that there is an input in this field, required keyword and a js function -->
+<input type="submit" value="submit!">
+</form>
 
-<p id="demo11"></p>
+<input type="text" name="name" autocomplete="off" >
+<button type="button" onclick="myFunction3()"> button</button>
 
 
+<p id="demo13"></p>
+
+<p id="demo14"></p>
+
+
+
+<p id="demo15"></p>
+
+<p id="demo16"></p>
+
+<p id="demo17"></p>
+
+<p id="demo18">Sample Text</p>
+
+<p id="demo19"></p>
+ 
+ 
 </div>
-
 <script src="practice.js"></script>
 </body>
 </html>
