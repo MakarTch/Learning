@@ -31,6 +31,7 @@ html, body{
 	padding:40px 120px;
 	background-color:white;
     box-shadow: 0 3px 3px 4px rgba(0, 0, 0, .1);
+    margin-top: 20px;
 }
   
 form{

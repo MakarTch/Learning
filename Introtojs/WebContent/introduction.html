@@ -8,63 +8,92 @@
 <body>
 <div class="navbar"></div>
 <div class="content">
-
+<h2>Introduction</h2>
 <p > Hi! My name is Makar, What's your name?</p>
 
-<input type="text" id="name" autocomplete="off" required>
-<button onclick="questionOne();">Click!</button>
+<input type="text" id="name" autocomplete="off" >
+<button onclick="questionOne()">Click!</button>
 
-<p id="questionOne" >Hi <span id="nameTwin"></span>, what's your favorite color?<br>
-<input type="text" id="color" autocomplete="off">
-<button onclick="questionTwo();">Click!</button>
+<p id="questionOne" style="visibility:hidden">Hi <span id="nameTwin"></span>, what's your favorite color?<br>
+<input type="text" id="color" autocomplete="off" >
+<button onclick="questionTwo()">Click!</button>
 </p>
 
-<p id="questionTwo" ><span id="colorTwin"></span> huh? Interesting choice. What state do you live in?<br>
-<input type="text" id="state" autocomplete="off">
-<button onclick="questionThree();">Click!</button>
+<p id="questionTwo" style="visibility:hidden"><span id="colorTwin" style="text-transform:capitalize"></span> huh? Interesting choice. What state do you live in?<br>
+<input type="text" id="state" autocomplete="off" >
+<button onclick="finalStatement()">Click!</button>
 </p>
 
-<p id="finalStatement">So <span id="nameTwin"></span>, your favorite color is <span id="colorTwin"></span> and you live in <span id="stateTwin"></span>.</p>
+<p id="finalStatement" style="visibility:hidden"></p>
 </div>
 
 <script>
 console.log("starting script");
 document.getElementById("name").focus();
-document.getElementById("questionOne").style.visibility="hidden";
-document.getElementById("questionTwo").style.visibility="hidden";
-document.getElementById("finalStatement").style.visibility="hidden";
 var name;
 var color;
 var state;
-console.log("name is " + name +", color is " + color + ", and state is " + state);
 
+function questionOneFocus(){
+	document.getElementById("color").focus();
+}
+function questionTwoFocus(){
+	document.getElementById("state").focus();
+}
 
 function questionOne(){
 	console.log("Inside questionOne");
-	name = document.getElementById("name").value;
+	name = capitalize(document.getElementById("name").value);
+	console.log(name);
 	document.getElementById("nameTwin").innerHTML = name;
 	document.getElementById("questionOne").style.visibility="visible";
-	console.log("name is " + name +", color is " + color + ", and state is " + state);
+	setTimeout(questionOneFocus,50);
 }
 
 function questionTwo(){
 	console.log("Inside questionTwo");
-	color = document.getElementById("color").value;
+	color = capitalize(document.getElementById("color").value);
 	document.getElementById("colorTwin").innerHTML = color;
 	document.getElementById("questionTwo").style.visibility="visible";
-	console.log("name is " + name +", color is " + color + ", and state is " + state);
+	setTimeout(questionTwoFocus,50);
+
 }
 
-function questionThree(){
-	console.log("Inside questionThree");
-	state = document.getElementById("state").value;
-	document.getElementById("stateTwin").innerHTML = state;
+function finalStatement(){
+	console.log("Inside finalStatement");
+	state = capitalize(document.getElementById("state").value);
+	console.log(state);
 	document.getElementById("finalStatement").style.visibility="visible";
-	console.log("name is " + name +", color is " + color + ", and state is " + state);
-
+	var userInfo = {
+		userName:name,
+		userColor:color,
+		userState:state,
+		introduction : function(){
+			return "Great! An object has created for " + this.userName + " who lives in " + this.userState + " and has a favorite color of " + this.userColor + 
+			"! If you\'d like to view my code please visit <a href= \"https://github.com/MakarTch/LeaningJS/blob/master/Introtojs/WebContent/introduction.html\" target=\"_blank\">my GitHub</a>.";
+		}
+	};
+	document.getElementById("finalStatement").innerHTML = userInfo.introduction();
+}
+function capitalize(str){
+	var text;
+	var finalString = "";
+	if (str.indexOf(" " > -1)){
+		var strArray = str.split(" ");
+		for(s of strArray){
+			var lower = s.toLowerCase();
+			text = s.charAt(0).toUpperCase() + lower.slice(1);
+			finalString += " " + text;
+			console.log(finalString);
+		}
+		console.log(finalString);
+	} else {
+		var lower = str.toLowerCase();
+		finalString = str.charAt(0).toUpperCase() + lower.slice(1);
+	}
+	return finalString;
 }
 
-console.log("name is " + name +", color is " + color + ", and state is " + state);
 console.log("ending script");
 </script>
 

@@ -10,6 +10,10 @@ function myFunction3(){
 function myFunction4(){
 	return arguments.length + " is the number of parameters passed throught the function";
 }
+function capitalize(string){
+	var lowerCase = string.toLowerCase();
+	return string.charAt(0).toUpperCase() + lower.slice(1);
+}
 function myFunction5(){
 	var x = document.forms["form1"];
 	var text = "";
@@ -17,6 +21,7 @@ function myFunction5(){
 	for (i=0;i<x.length;i++){
 		text += x.elements[i].value+"<br>";
 	}
+	
 	document.getElementById("demo20").innerHTML = text;
 }
 function myFunction6() {
