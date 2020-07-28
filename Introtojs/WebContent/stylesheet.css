@@ -94,7 +94,7 @@ input[type="radio"]{
 }
 
 a:link{
-	color:rgb(0,153,77);
+	color:blue;
 	text-decoration:none;
 }
 a:visited{

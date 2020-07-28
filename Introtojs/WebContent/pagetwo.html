@@ -35,7 +35,38 @@ Click Me!</button><br>
 
 <p id="demo21"></p>
 
+<p> Enter your block number please</p>
+<input type="text" id="block">
+<button type="button" onclick="blockFunction()">Click me!</button>
+<br>
+<p id="demo22">fdfd</p>
 
+<p > Hi what's your name?</p>
+<input type="text" id="nameFirst">
+<button type="button" onclick="nameFunction()">Click</button>
+<p id="demo23"></p>
+
+<script>
+
+function nameFunction(){
+	let text = document.getElementById("nameFirst").value;
+	document.getElementById("demo23").innerHTML = "Oh you should have told me your name was " + text + "!";
+}
+
+
+
+
+
+
+
+
+function blockFunction(){
+	let text = "";
+	text = document.getElementById("block").value;
+	console.log("text is " + text);
+	document.getElementById("demo22").innerHTML = text;
+}
+</script>
 
 <script>
 var button = document.getElementById("myBtn");
