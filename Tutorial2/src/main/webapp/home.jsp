@@ -35,6 +35,14 @@
 <input type="submit"><br>
 </form><br>
 
+<form action="displayAliens">
+<input type="text" name="color" autocomplete="off">
+<input type="text" name="model" autocomplete="off">
+<input type="text" name="brand" autocomplete="off">
+<input type="submit">
+
+</form>
+
 
 </div>
 </body>

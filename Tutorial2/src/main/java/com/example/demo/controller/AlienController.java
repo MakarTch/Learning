@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.dao.AlienRepo;
 import com.example.demo.model.Alien;
+import com.example.demo.model.Car;
 
 @Controller
 public class AlienController {
@@ -52,6 +53,15 @@ public class AlienController {
 	@ResponseBody
 	public Optional<Alien> getAlienById(@PathVariable("aid") int aid) {
 		return repo.findById(aid);
+	}
+	
+	@GetMapping("/displayAliens")
+	public ModelAndView displayAliens(Car car) {
+		ModelAndView mv = new ModelAndView("displayAliens.jsp");
+		String str1 = "testString";
+		mv.addObject("obj",car);		
+		mv.addObject("stringExample",str1);
+		return(mv);
 	}
 	
 //	@GetMapping("/deleteAlien")

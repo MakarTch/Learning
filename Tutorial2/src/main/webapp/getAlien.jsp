@@ -16,6 +16,10 @@
 	
 	${alien.toString()} 
 	
+	${Alien.staticMethod()}
+	
+	${alien.toString() }
+	
 </div>
 </body>
 </html>

@@ -35,5 +35,8 @@ public class Alien {
 	public String test() {
 		return "<h1>Testing this stuff</h1>";
 	}
+	public static String staticMethod() {
+		return "returning from static method in Alien";
+	}
 	
 }
