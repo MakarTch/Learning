@@ -23,6 +23,7 @@ public class AlienController {
 	
 	@GetMapping("/")
 	public String home() {
+		System.out.println("boogagaga");
 		return "home.jsp";
 	}
 	
