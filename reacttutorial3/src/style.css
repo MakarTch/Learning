@@ -1,0 +1,14 @@
+html, body{
+	margin-left:20px;
+	font-size:16px;
+	background-color:white;/*            */
+	/*height:100%;*/
+	letter-spacing:1px;
+	font-family:'Adamina';
+	background-image:linear-gradient(var(--light-main-color),var(--main-color));/*            */
+	margin-bottom:90px
+}
+
+.navbar{
+    background-color: aquamarine;
+}
