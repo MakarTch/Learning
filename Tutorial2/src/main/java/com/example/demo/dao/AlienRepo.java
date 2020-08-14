@@ -14,4 +14,6 @@ public interface AlienRepo extends JpaRepository<Alien,Integer> {
 	
 	@Query("from Alien where tech=?1 order by name")
 	List<Alien> findByTechSorted(String tech);
+	
+	//ihfjh
 }
