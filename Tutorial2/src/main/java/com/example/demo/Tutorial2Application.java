@@ -10,7 +10,7 @@ public class Tutorial2Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Tutorial2Application.class, args);
-		System.out.println(Alien.staticMethod());
+		//System.out.println(Alien.staticMethod());
 	}
 
 }

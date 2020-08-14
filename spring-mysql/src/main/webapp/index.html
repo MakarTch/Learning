@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ticket holders</title>
+</head>
+<body>
+
+<form action="/addTicket">
+	<h4>Add a ticket</h4>
+	<label for="amount">Amount</label>
+	<input type="number" name="amount" autocomplete="off" required/>
+	<label for="category">Category</label>
+	<input type="text" name="category"autocomplete="off"required/>
+	<input type="submit" value="submit this thang">
+</form>
+<form action="/removeTicket">
+	<h4>Remove a ticket</h4>
+	<label for="id">ID Number</label>
+	<input type="number" name="id" autocomplete="off"required/>
+	<input type="submit" value="submit this thang">
+</form>
+<form action="/updateTicket">
+	<h4>Update a ticket</h4>
+	<label for="id">ID Number</label>
+	<input type="number" name="id" autocomplete="off"required/>
+	<label for="amount">Amount</label>
+	<input type="number" name="amount" autocomplete="off"required/>
+	<label for="category">Category</label>
+	<input type="text" name="category"autocomplete="off"required/>
+	<input type="submit" value="submit this thang">
+</form>
+
+</body>
+</html>
