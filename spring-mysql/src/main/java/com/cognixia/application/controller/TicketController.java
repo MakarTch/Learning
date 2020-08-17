@@ -1,5 +1,6 @@
 package com.cognixia.application.controller;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.cognixia.application.dao.TicketDAO;
 import com.cognixia.application.model.Ticket;
@@ -21,8 +23,12 @@ public class TicketController {
 	@GetMapping("/")
 	public String home() {
 		System.out.println("in home");
-		System.out.println(repo.selectAllFromTable());
-		System.out.println(repo.selectById(9));
+		//System.out.println(repo.selectAllFromTable());
+		List<Ticket> ticketList = repo.selectAllFromTable();
+		//System.out.println(ticketList);
+		//System.out.println(repo.selectById(9));
+		Ticket ticket = repo.selectById(7);
+		System.out.println(ticket.getCategory());
 		return("index.html");
 	}
 	
@@ -45,6 +51,7 @@ public class TicketController {
 	@GetMapping("/addTicket")
 	public String addTicket(Ticket ticket) {
 		repo.save(ticket);
+		System.out.println("saved ticket");
 		return ("index.html");
 	}
 	
@@ -52,7 +59,7 @@ public class TicketController {
 	public String removeTicket(int id) {
 		if (repo.existsById(id)) {
 			System.out.println("ticket exists");
-			repo.deleteById(id);;
+			repo.deleteById(id);
 		} else {
 			System.out.println("id doesnt exist");
 		}
