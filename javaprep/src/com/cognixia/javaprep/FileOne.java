@@ -46,7 +46,6 @@ public class FileOne {
 		System.out.println(a.equals(c));
 		System.out.println(a.hashCode());
 		System.out.println(b.hashCode());
-		System.out.println(c.hashCode());
 		System.out.println("----------");
 		Outer object = new Outer();
 		Outer object1 = new Outer();
