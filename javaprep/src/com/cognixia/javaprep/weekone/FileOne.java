@@ -1,6 +1,6 @@
-package com.cognixia.javaprep;
+package com.cognixia.javaprep.weekone;
 
-import com.cognixia.javaprep.OuterClass.FirstLevel;
+import com.cognixia.javaprep.weekone.OuterClass.FirstLevel;
 
 class Outer{
 	int a;
