@@ -27,6 +27,7 @@ class aClassOne implements interfaceTwo, interfaceOne{
 		System.out.println("function two");
 	}
 	
+	
 	int int2 = int1;
 }
 
@@ -48,7 +49,19 @@ class ClassTwo extends aClassTwo{
 		// TODO Auto-generated method stub
 		
 	}
+	final public void function8() {
+		System.out.println("we in here");
+	}
+	public void function8(int int1) {
+		System.out.println("we in here");
+	}
 	
+}
+class ClassThree extends ClassTwo{
+
+	public void function8(int int1) {
+		System.out.println("we in here");
+	}
 }
 
 public class Know {
@@ -61,6 +74,10 @@ public class Know {
 		
 		ClassTwo two = new ClassTwo();
 		two.function3();
+		
+		final ClassThree three = new ClassThree();
+		
+		three.function2();
 	}
 
 }
