@@ -20,7 +20,7 @@ public class JavaIO {
 			if (in != null) 
 				in.close();
 			if (out != null)
-				out.close();
+				out.close(); 
 		}
 		
 		System.out.println("hello".charAt(0));
