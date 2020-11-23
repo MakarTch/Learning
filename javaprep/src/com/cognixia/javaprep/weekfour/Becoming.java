@@ -1,10 +1,12 @@
 package com.cognixia.javaprep.weekfour;
 
-public class Becoming {
+import com.cognixia.javaprep.weekfive.Anger;
+
+public class Becoming extends Anger{
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Becoming anger = new Becoming();
+		System.out.println(anger.soldier);
 	}
 
 }

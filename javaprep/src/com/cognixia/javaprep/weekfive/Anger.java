@@ -2,6 +2,6 @@ package com.cognixia.javaprep.weekfive;
 
 public class Anger {
 
-	int soldier = 14;
+	protected int soldier = 14;
 	
 }

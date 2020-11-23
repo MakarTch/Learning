@@ -9,7 +9,7 @@ class One {
 	
 	public static int counter = 0;
 	int pri = 17;
-	private int yo = 12;
+	int yo = 12;
 	{counter++;}
 
 	One(){

@@ -8,6 +8,7 @@ public class JavaIO {
 		FileInputStream in = null;
 		FileOutputStream out = null;
 		
+		
 		try {
 			in = new FileInputStream("input.txt");
 			out = new FileOutputStream("output.txt");
