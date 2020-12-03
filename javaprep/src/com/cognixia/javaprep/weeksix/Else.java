@@ -7,6 +7,14 @@ public class Else {
 		int test = 16;
 		final int test1 = 98;
 		
+		try {
+			System.out.println(3);
+			System.exit(0);
+		} finally {
+			System.out.println(3);
+		}
+
+		
 		
 	}
 }
