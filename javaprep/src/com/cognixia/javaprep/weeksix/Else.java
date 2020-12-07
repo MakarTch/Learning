@@ -1,5 +1,11 @@
 package com.cognixia.javaprep.weeksix;
 
+class Test{
+	public static void method() {
+		System.out.println("yo");
+	}
+}
+
 public class Else {
 
 	public static void main(String args[]) {
@@ -9,11 +15,12 @@ public class Else {
 		
 		try {
 			System.out.println(3);
-			System.exit(0);
 		} finally {
 			System.out.println(3);
 		}
-
+		
+		Test.method();
+		
 		
 		
 	}
