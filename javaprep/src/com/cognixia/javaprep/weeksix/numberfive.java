@@ -16,5 +16,16 @@ public class numberfive {
 				System.out.println(num);
 			}
 		}
+		
+		ArrayList<Integer> yoyo = new ArrayList<>();
+		yoyo.add(1);
+		yoyo.add(89);
+		yoyo.add(34);
+		yoyo.add(939);
+		yoyo.add(12);
+		yoyo.add(-4);
+
+		//yoyo.sort(null);
+		System.out.println(yoyo);
 	}
 }
