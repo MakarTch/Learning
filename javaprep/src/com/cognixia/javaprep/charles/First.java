@@ -3,6 +3,9 @@ package com.cognixia.javaprep.charles;
 import java.util.Arrays;
 import java.util.List;
 
+class Box<T>{
+	
+}
 public class First {
 
 	public static void main(String args[]) {
@@ -18,5 +21,12 @@ public class First {
 				counter++;
 		}
 		System.out.println(counter);
+		
+		String test = "hello";
+		test =  test + test + "yo";
+		System.out.println(test);
+		
+		Integer num = 3;
+		System.out.println(num);
 	}
 }
