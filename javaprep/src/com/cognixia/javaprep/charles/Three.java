@@ -1,22 +1,26 @@
 package com.cognixia.javaprep.charles;
 
+import java.util.*;
 
-class yo{
+abstract class yo{
 	
-	public void method() {
+	public void method() throws Exception {
 		System.out.println("yo");
 	}
 }
 class yoyo extends yo{
 	
-	public void method() {
-		System.out.println("yoyo");
+	@Override
+	public void method() throws Exception {
+		// TODO Auto-generated method stub
+		super.method();
 	}
+
 }
 
 abstract class yoyoyo extends yoyo{
 	
-	public void method() {
+	public void method() throws Exception {
 		super.method();
 	}
 }
@@ -46,6 +50,7 @@ interface Dos extends Uno {
 public class Three {
 
 	public static void main(String[] args) {
-
+		
+		
 	}
 }
