@@ -1,0 +1,2 @@
+Writing to output.txt
+Print writer writing to a file
