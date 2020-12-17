@@ -15,10 +15,10 @@ public class ReadingFiles {
 			StringBuilder stringBuilder = new StringBuilder();
 			
 			//Line by line
-//			String line;
-//			while((line = bufferedReader.readLine())!=null) {
-//				stringBuilder.append(line + "\n");
-//			}
+			String line;
+			while((line = bufferedReader.readLine())!=null) {
+				stringBuilder.append(line + "\n");
+			}
 			
 			//Character by Character
 //			int letter;

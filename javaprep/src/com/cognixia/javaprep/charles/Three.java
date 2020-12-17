@@ -4,6 +4,8 @@ import java.util.*;
 
 abstract class yo{
 	
+	int var = 3;
+	
 	public void method() throws Exception {
 		System.out.println("yo");
 	}
@@ -47,10 +49,11 @@ interface Dos extends Uno {
 }
 
 
-public class Three {
+public class Three extends yo {
 
 	public static void main(String[] args) {
 		
-		
+		Three three = new Three();
+		System.out.println(three.var);
 	}
 }
