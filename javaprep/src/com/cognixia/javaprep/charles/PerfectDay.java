@@ -22,8 +22,8 @@ public class PerfectDay {
 		
 		Stream<Integer> numStream = nums.stream();
 		
-//		List<Integer> result =
-//				numStream.filter(num -> num>49).collect(Collector.to);
+		
+		numStream.filter(num -> num>49).forEach(num -> System.out.println(num));
 		
 		
 		
