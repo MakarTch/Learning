@@ -25,6 +25,7 @@ public class PerfectDay {
 		
 		numStream.filter(num -> num>49).forEach(num -> System.out.println(num));
 		
+		System.out.println(numStream);
 		
 		
 	}
