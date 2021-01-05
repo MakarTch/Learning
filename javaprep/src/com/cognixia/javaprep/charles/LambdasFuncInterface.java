@@ -4,15 +4,13 @@ package com.cognixia.javaprep.charles;
 @FunctionalInterface
 interface Calculate{
 	
-	int hello = 3;
-	
 	float calc(int x, int y);
 }
 public class LambdasFuncInterface {
 
 	public static void main(String[] args) {
 		
-		Calculate add = (x,y) -> x+y;
+		Calculate add = (x,y) -> x+y;//Java is treating add like an object, but its just a function
 		Calculate sub = (x,y) -> x-y;
 		Calculate div = (x,y) ->{
 			if (y==0) return 0;
